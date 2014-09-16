@@ -42,27 +42,18 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '.dancer', function() {
-    // Set variable called closestDancer with position top and left
+    $('.dancer').css('background-color', '');
     var closestDancer;
-
-    // Set variable called closestDistance
     var closestDistance;
 
-    // Need to reset these everytime a dancer is clicked
-    console.log(closestDancer);
-    console.log(closestDistance);
-
-    // Set variable called clickedDancer with position of top and left
     var clickedDancer = $(this);
-    // console.log(clickedDancer);
 
-
-    // Iterate through array of dancers
     var dancerArray = window.dancers;
 
+    // Iterate through array of dancers
     for(var i = 0; i < dancerArray.length; i++) {
 
-      if((dancerArray[i].css('top') !== clickedDancer.css('top')) && (dancerArray[i].css('left') !== clickedDancer.css('left'))) {
+      if((dancerArray[i].css('top') !== clickedDancer.css('top')) || (dancerArray[i].css('left') !== clickedDancer.css('left'))) {
 
         var distance = Math.sqrt(Math.pow((+dancerArray[i].css('top').slice(0,-2) - +clickedDancer.css('top').slice(0,-2)),2) + Math.pow((+dancerArray[i].css('left').slice(0,-2) - +clickedDancer.css('left').slice(0,-2)),2));
         if(closestDistance === undefined)  {
@@ -71,14 +62,14 @@ $(document).ready(function(){
 
           // Compare all other items to closestDistance
         if(distance < closestDistance) {
-        closestDistance = distance;
-        closestDancer = dancerArray[i];
+          closestDistance = distance;
+          closestDancer = dancerArray[i];
         } else {
           console.log('Not Close Enough');
         }
 
       } else {
-        console.log('This is the clicked item.');
+          console.log('This is the clicked item.');
       }
 
     }
@@ -86,22 +77,39 @@ $(document).ready(function(){
     console.log('Loop Is Done');
     console.log('This is the closest dancer:', closestDancer);
     $(closestDancer).css('background-color','yellow');
-    // Set css color of closestDancer to yellow
 
   });
 
   $('#lineup').on('click', function(event) {
     console.log(window.dancers);
-    var left = 0;
+    // var left = 0;
     // $('.blueJumper').css({left: 0});
-    $('.dancer').css({left: left});
-
+    // $('.dancer').css({left: left});
+    // console.log(Dancer);
+    Dancer.prototype.lineUp();
+    $(this).hide();
 
     // $('.shyDancer').css({left: 0});
-    $('body').css({background: 'black'});
+    // $('body').css({background: 'black'});
 
     // move dancers 10 pixels to the right every second
-    setInterval(function() {left +=10; $('.dancer').css('left',left);}, 2000);
+    // setInterval(function() {left +=10; $('.dancer').css('left',left);}, 2000);
+
+  });
+
+  $('#dance').on('click', function(event) {
+    // var left = 0;
+    // $('.blueJumper').css({left: 0});
+    // $('.dancer').css({left: left});
+    // console.log(Dancer);
+    Dancer.prototype.marchALittle(200, 300);
+    $(this).hide();
+
+    // $('.shyDancer').css({left: 0});
+    // $('body').css({background: 'black'});
+
+    // move dancers 10 pixels to the right every second
+    // setInterval(function() {left +=10; $('.dancer').css('left',left);}, 2000);
 
   });
 

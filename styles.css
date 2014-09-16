@@ -37,10 +37,9 @@ body, a:link, a:visited, a:active{
 }
 
 .crazyBlue {
--webkit-transition: width 0.2s, height 0.2s, background-color 0.2s, -webkit-transform 0.2s;
-transition: width 0.2s, height 0.2s, background-color 0.2s, transform 0.2s;
--webkit-transform:rotate(360deg);
-transform:rotate(360deg);
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
 }
 
 .shyDancer {
@@ -49,7 +48,7 @@ transform:rotate(360deg);
   position: absolute;
   width: 125px;
   height: 15px;
-//  background-color: white;
+  background-color: white;
 }
 
 .yellowBG {
@@ -62,4 +61,7 @@ transform:rotate(360deg);
 
 }
 
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
