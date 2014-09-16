@@ -21,15 +21,14 @@ $(document).ready(function(){
     // window.that is because it is a globally stored function
 
     // make a dancer with a random position
-    console.log(dancerMakerFunction);
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       //later replace function invocake with window.fnName
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    console.log(dancer);
-    $('body').append(dancer);
+
+    $('body').append(dancer.$node);
   });
 });
 
