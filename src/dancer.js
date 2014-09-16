@@ -34,11 +34,9 @@ var Dancer = function(top, left, timeBetweenSteps){
 
   Dancer.prototype.lineUp = function(){
     console.log(window.dancers);
-    var lineupHeight = 0;
     for(var i = 0; i < window.dancers.length; i++) {
       currentDancer = window.dancers[i];
-      currentDancer.setPosition(0,lineupHeight);
-      lineupHeight += 25;
+      currentDancer.setPosition(0,window.dancers[i].css('top'));
     }
 
     // the basic makedancer doesn't do anything interesting at all on each step,

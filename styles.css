@@ -20,10 +20,10 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
+.dancer {
   position:absolute;
+  min-width: 25px;
+  min-height: 25px;
 }
 
 .blueJumper {
@@ -37,7 +37,6 @@ body, a:link, a:visited, a:active{
 }
 
 .crazyBlue {
-
 -webkit-transition: width 0.2s, height 0.2s, background-color 0.2s, -webkit-transform 0.2s;
 transition: width 0.2s, height 0.2s, background-color 0.2s, transform 0.2s;
 -webkit-transform:rotate(360deg);
@@ -53,8 +52,14 @@ transform:rotate(360deg);
 //  background-color: white;
 }
 
-.shyDancer:hover {
-  display:none;
-  border: 1px white solid;
+.yellowBG {
+  background: 'yellow';
 }
+
+.blinky {
+  border:10px solid red;
+  border-radius:10px;
+
+}
+
 
