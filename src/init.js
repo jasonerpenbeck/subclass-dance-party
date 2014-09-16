@@ -35,10 +35,16 @@ $(document).ready(function(){
 
   $('#lineup').on('click', function(event) {
     console.log(window.dancers);
+    var left = 0;
     $('.blueJumper').css({left: 0});
     $('.dancer').css({left: 0});
     $('.shyDancer').css({left: 0});
     $('body').css({background: 'blue'});
+
+    // move dancers 10 pixels to the right every second
+    setInterval(function() {left +=10;}, 1000);
+
+
 
   });
 

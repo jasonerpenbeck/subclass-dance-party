@@ -29,7 +29,6 @@ body, a:link, a:visited, a:active{
 .blueJumper {
   background: url('img/logo.png');
   background-size: 200px 200px;
-  background-color: white;
   width: 200px;
   height: 200px;
   border: 0px solid;
@@ -38,10 +37,11 @@ body, a:link, a:visited, a:active{
 }
 
 .crazyBlue {
--webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
-transition: width 2s, height 2s, background-color 2s, transform 2s;
--webkit-transform:rotate(180deg);
-transform:rotate(180deg);
+
+-webkit-transition: width 0.2s, height 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+transition: width 0.2s, height 0.2s, background-color 0.2s, transform 0.2s;
+-webkit-transform:rotate(360deg);
+transform:rotate(360deg);
 }
 
 .shyDancer {
@@ -55,5 +55,6 @@ transform:rotate(180deg);
 
 .shyDancer:hover {
   display:none;
+  border: 1px white solid;
 }
 
