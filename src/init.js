@@ -16,6 +16,7 @@ $(document).ready(function(){
      * to the stage.
      */
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
+    console.log(dancerMakerFunctionName);
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // window.that is because it is a globally stored function
@@ -25,10 +26,21 @@ $(document).ready(function(){
       //later replace function invocake with window.fnName
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 10000
+      Math.random() * 1000
     );
 
     $('body').append(dancer.$node);
+    window.dancers.push(dancer.$node);
   });
+
+  $('#lineup').on('click', function(event) {
+    console.log(window.dancers);
+    $('.blueJumper').css({left: 0});
+    $('.dancer').css({left: 0});
+    $('.shyDancer').css({left: 0});
+    $('body').css({background: 'blue'});
+
+  });
+
 });
 

@@ -10,6 +10,7 @@ ShyDancer.prototype.constructor = ShyDancer;
 
 ShyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
-  // this.$node.toggle("explode");
+  this.$node.toggleClass('rotate');
+  this.$node.toggleClass('no-rotate');
 };
 

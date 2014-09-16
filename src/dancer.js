@@ -12,6 +12,7 @@ var Dancer = function(top, left, timeBetweenSteps){
     this.setPosition(this.top, this.left);
     this.step();
 
+
   };
 
   Dancer.prototype.step = function(){
@@ -29,6 +30,20 @@ var Dancer = function(top, left, timeBetweenSteps){
     };
     this.$node.css(styleSettings);
     //<span class="makedancer" style="{top: top, left: left}"></span>
+  };
+
+  Dancer.prototype.lineUp = function(){
+    console.log(window.dancers);
+    var lineupHeight = 0;
+    for(var i = 0; i < window.dancers.length; i++) {
+      currentDancer = window.dancers[i];
+      currentDancer.setPosition(0,lineupHeight);
+      lineupHeight += 25;
+    }
+
+    // the basic makedancer doesn't do anything interesting at all on each step,
+    // it just schedules the next step
+    setTimeout(this.step.bind(this), this.timeBetweenSteps);
   };
 
   // now that we have defined the makedancer object, we can start setting up important parts of it by calling the methods we wrote

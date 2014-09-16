@@ -27,20 +27,33 @@ body, a:link, a:visited, a:active{
 }
 
 .blueJumper {
-  border: 20px solid blue;
-  border-radius: 5px;
+  background: url('img/logo.png');
+  background-size: 200px 200px;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border: 0px solid;
+  /*border-radius: 5px;*/
   position: absolute;
+}
+
+.crazyBlue {
+-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+transition: width 2s, height 2s, background-color 2s, transform 2s;
+-webkit-transform:rotate(180deg);
+transform:rotate(180deg);
 }
 
 .shyDancer {
   border: 15px dotted orange;
   border-radius: 5px;
   position: absolute;
-  width: 15px;
+  width: 125px;
   height: 15px;
-  background-color: white;
+//  background-color: white;
 }
 
 .shyDancer:hover {
   display:none;
 }
+
