@@ -129,10 +129,50 @@ $('#ball').remove();
     // get them lined up in formation
     // run pass play
 
+    // remove all players from the field
+    while(window.dancers.length > 1) {
+      window.dancers.pop();
+    }
 
     // center the ball
     $(window.dancers[0]).removeClass('crazyBlue');
     window.dancers[0].css({left: window.innerWidth * .5, top: window.innerHeight * .5});
+
+
+    // $('#ball').trigger('click');
+    // Make 11 Niners
+    for(var i = 1; i<=11; i++) {
+      $('#niner').trigger('click');
+    }
+    // Make 11 Raiders
+    for(var i = 1; i<=11; i++) {
+      $('#raider').trigger('click');
+    }
+
+    // Set the offensive line
+    var olDistanceFromBall = 60;
+    window.dancers[1].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5}); // center
+    window.dancers[1].addClass('ol cent');
+    window.dancers[2].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 - 60}); // left guard
+    window.dancers[2].addClass('ol lg');
+    window.dancers[3].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 - 120}); // left tackle
+    window.dancers[3].addClass('ol lt');
+    window.dancers[4].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 + 60}); // right guard
+    window.dancers[4].addClass('ol rg');
+    window.dancers[5].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 + 120}); // right tackle
+    window.dancers[5].addClass('ol rt');
+    window.dancers[6].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 + 180}); // right tackle
+    window.dancers[6].addClass('te');
+    window.dancers[7].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 - 300}); // WR Top
+    window.dancers[7].addClass('wr wr-top');
+    window.dancers[8].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 + 400}); // WR Bottom
+    window.dancers[8].addClass('wr wr-bottom');
+    window.dancers[9].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 + 300}); // WR Slot
+    window.dancers[9].addClass('wr slot');
+    window.dancers[10].css({left: window.innerWidth * .5 - olDistanceFromBall - 100, top: window.innerHeight * .5}); //QB
+    window.dancers[10].addClass('wr slot');
+    window.dancers[11].css({left: window.innerWidth * .5 - olDistanceFromBall - 300, top: window.innerHeight * .5}); // RB
+    window.dancers[11].addClass('wr slot');
 
 
   });
