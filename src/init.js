@@ -10,7 +10,9 @@ $(document).ready(function(){
   // });
 
   $(document).on('keyup', 32, function() {
-    console.log('throw a pass');
+    $('.blueJumper').animate({
+      left: "+=500"
+    }, 5000);
   });
 
   $("a#stop").on('click', function() {
