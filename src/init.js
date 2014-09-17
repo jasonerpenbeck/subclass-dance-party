@@ -107,7 +107,7 @@ $('#ball').remove();
     // $('.dancer').css({left: left});
     // console.log(Dancer);
     Dancer.prototype.lineUp();
-    $(this).hide();
+    // $(this).hide();
 
     // $('.shyDancer').css({left: 0});
     // $('body').css({background: 'black'});
