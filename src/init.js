@@ -1,6 +1,7 @@
 $(document).ready(function(){
   window.dancers = [];
 
+
   // $(document).on('click', function() {
   //   $('audio')[0].play();
   // });
@@ -123,6 +124,22 @@ $('#ball').remove();
     $(closestDancer).css('background-color','yellow');
 
   });
+
+  $('#runPlay').on('click', function() {
+    // get them lined up in formation
+    // run pass play
+
+
+    // center the ball
+    $(window.dancers[0]).removeClass('crazyBlue');
+    window.dancers[0].css({left: window.innerWidth * .5, top: window.innerHeight * .5});
+
+
+  });
+
+
+
+
 
   $('#lineup').on('click', function(event) {
     Dancer.prototype.lineUp();

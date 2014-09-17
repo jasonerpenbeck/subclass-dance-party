@@ -35,14 +35,14 @@ body, a:link, a:visited, a:active{
 .blueJumper {
   /*background: url('img/logo.png');*/
   background: url('img/football.png') no-repeat;
-  background-size: 60%;
+  /*background-size: 60%;*/
   /*background-size: 200px 200px;*/
-  width: 200px;
-  height: 200px;
+  width: 80px;
+  height: 80px;
   border: 0px solid;
   /*border-radius: 5px;*/
   position: absolute;
-
+  background-size: contain;
 }
 
 .crazyBlue {
@@ -69,6 +69,42 @@ body, a:link, a:visited, a:active{
   width: 100px;
   height: 125px;
 }
+
+.ol {
+
+}
+
+.lt {
+
+}
+
+.lg {
+
+}
+
+.cent {
+
+}
+
+.rg {
+
+}
+
+.rt {}
+
+.te {}
+
+.wr{
+
+}
+
+.wr-top {}
+.wr-bottom {}
+.slot {}
+.qb {}
+.rb {}
+
+
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
