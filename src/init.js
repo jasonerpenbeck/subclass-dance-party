@@ -12,7 +12,15 @@ $(document).ready(function(){
   $(document).keydown(function(event) {
     if(event.which === 32 && +$('.blueJumper').css('left').slice(0, -2) < 1400) {
       $('.blueJumper').animate({
-        left: "+=900"
+        left: "+=900",
+      }, 3000);
+    }
+
+    if(event.which === 38 && +$('.blueJumper').css('left').slice(0, -2) < 1400) {
+      console.log('up');
+      $('.blueJumper').animate({
+        left: "+=600",
+        top: "-=400"
       }, 2000);
     }
   });
