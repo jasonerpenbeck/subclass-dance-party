@@ -25,7 +25,7 @@ var Dancer = function(top, left, timeBetweenSteps){
 
    var dancerArray = window.dancers;
    for(var i = 0; i < dancerArray.length; i++) {
-      if(dancerArray[i].classList[1] === "shyDancer") {
+      if(dancerArray[i].hasClass("shyDancer")) {
         dancerArray[i].css({left: Math.random() * 100});
       } else {
         dancerArray[i].css({left: Math.random() * 1000})
