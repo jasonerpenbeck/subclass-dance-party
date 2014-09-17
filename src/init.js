@@ -9,10 +9,12 @@ $(document).ready(function(){
   //   $('audio')[0].pause("death");
   // });
 
-  $(document).on('keydown', 32, function() {
-    $('.blueJumper').animate({
-      left: "+=500"
-    }, 5000);
+  $(document).keydown(function(event) {
+    if(event.which === 32) {
+      $('.blueJumper').animate({
+        left: "+=900"
+      }, 2000);
+    }
   });
 
   $("a#stop").on('click', function() {
