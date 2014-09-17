@@ -9,6 +9,10 @@ $(document).ready(function(){
   //   $('audio')[0].pause("death");
   // });
 
+  $(document).on('keyup', 32, function() {
+    console.log('throw a pass');
+  });
+
   $("a#stop").on('click', function() {
     $('#song').remove();
     $(this).remove();
