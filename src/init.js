@@ -23,6 +23,15 @@ $(document).ready(function(){
         top: "-=400"
       }, 2000);
     }
+
+    if(event.which === 40 && +$('.blueJumper').css('left').slice(0, -2) < 1400) {
+      console.log('up');
+      $('.blueJumper').animate({
+        left: "+=600",
+        top: "+=300"
+      }, 2000);
+    }
+
   });
 
   $("a#stop").on('click', function() {
