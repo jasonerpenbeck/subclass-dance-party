@@ -14,8 +14,6 @@ $(document).ready(function(){
     $(this).remove();
   })
 
-
-  // $('audio').play();
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
      * buttons on index.html. You should only need to make one small change to it.
@@ -101,36 +99,13 @@ $('#ball').remove();
   });
 
   $('#lineup').on('click', function(event) {
-    console.log(window.dancers);
-    // var left = 0;
-    // $('.blueJumper').css({left: 0});
-    // $('.dancer').css({left: left});
-    // console.log(Dancer);
     Dancer.prototype.lineUp();
-    // $(this).hide();
-
-    // $('.shyDancer').css({left: 0});
-    // $('body').css({background: 'black'});
-
-    // move dancers 10 pixels to the right every second
-    // setInterval(function() {left +=10; $('.dancer').css('left',left);}, 2000);
-
   });
 
   $('#dance').on('click', function(event) {
-    // var left = 0;
-    // $('.blueJumper').css({left: 0});
-    // $('.dancer').css({left: left});
-    // console.log(Dancer);
+
     Dancer.prototype.marchALittle(200, 300);
     $(this).hide();
-
-    // $('.shyDancer').css({left: 0});
-    // $('body').css({background: 'black'});
-
-    // move dancers 10 pixels to the right every second
-    // setInterval(function() {left +=10; $('.dancer').css('left',left);}, 2000);
-
   });
 
 });
