@@ -9,7 +9,7 @@ $(document).ready(function(){
   //   $('audio')[0].pause("death");
   // });
 
-  $(document).on('keyup', 32, function() {
+  $(document).on('keydown', 32, function() {
     $('.blueJumper').animate({
       left: "+=500"
     }, 5000);
