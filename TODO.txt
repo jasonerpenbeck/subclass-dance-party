@@ -1,0 +1,6 @@
+TODO:
+
+Set limits so players cannot dance off screen.
+Players line up in formation (with offensive line, etc).
+Cannot be more than eleven players per team.
+One player follows toss.

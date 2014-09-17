@@ -66,7 +66,7 @@ var Dancer = function(top, left, timeBetweenSteps){
       dancerArray[i].animate({
         left: oldLeft + left,
         top: oldTop + top
-      }, 2000);
+      }, 750);
     }
 
   };
