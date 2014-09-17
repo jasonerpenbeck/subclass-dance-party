@@ -10,7 +10,7 @@ $(document).ready(function(){
   // });
 
   $(document).keydown(function(event) {
-    if(event.which === 32) {
+    if(event.which === 32 && +$('.blueJumper').css('left').slice(0, -2) < 1400) {
       $('.blueJumper').animate({
         left: "+=900"
       }, 2000);
