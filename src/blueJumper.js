@@ -1,6 +1,6 @@
 
 var BlueJumper = function(top, left, timeBetweenSteps){
-    Dancer.call(this, top, left, 500);
+    Dancer.call(this, 500, 700, 500);
     this.$node.toggleClass('blueJumper');
     this.$node.addClass('crazyBlue');
  };

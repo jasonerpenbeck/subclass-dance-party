@@ -1,6 +1,21 @@
 $(document).ready(function(){
   window.dancers = [];
 
+  $(document).on('click', function() {
+    $('audio')[0].play();
+  });
+
+  // $(document).on('click', '#stop', function() {
+  //   $('audio')[0].pause("death");
+  // });
+
+  $("a#stop").on('click', function() {
+    $('#song').remove();
+    $(this).remove();
+  })
+
+
+  // $('audio').play();
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
      * buttons on index.html. You should only need to make one small change to it.
@@ -9,7 +24,9 @@ $(document).ready(function(){
      * maker functions available in the global scope, clicking that node
      * will call the function to make the dancer.
      */
-
+     if($(this)[0].id === "ball") {
+      $(this).remove();
+     }
     /* dancerMakerFunctionName is a string which must match
      * one of the dancer maker functions available in global scope.
      * A new object of the given type will be created and added
@@ -31,7 +48,10 @@ $(document).ready(function(){
 
     $('body').append(dancer.$node);
     window.dancers.push(dancer.$node);
+
   });
+
+
 
   $(document).on('mouseenter', '.shyDancer', function() {
     $(this).css('opacity',.1);

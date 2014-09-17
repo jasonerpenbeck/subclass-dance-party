@@ -5,6 +5,7 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background: url('img/niner-field.jpg');
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -17,6 +18,11 @@ body, a:link, a:visited, a:active{
   height:32px;
   background-color: #555;
 }
+
+.leftnav {
+  padding: 5px 12px;
+  float:left;
+}
 .title{
   background-color: #777;
 }
@@ -27,13 +33,16 @@ body, a:link, a:visited, a:active{
 }
 
 .blueJumper {
-  background: url('img/logo.png');
-  background-size: 200px 200px;
+  /*background: url('img/logo.png');*/
+  background: url('img/football.png') no-repeat;
+  background-size: 60%;
+  /*background-size: 200px 200px;*/
   width: 200px;
   height: 200px;
   border: 0px solid;
   /*border-radius: 5px;*/
   position: absolute;
+
 }
 
 .crazyBlue {
@@ -43,12 +52,11 @@ body, a:link, a:visited, a:active{
 }
 
 .shyDancer {
-  border: 15px dotted orange;
-  border-radius: 5px;
+  background: url('img/willis.png') no-repeat;
   position: absolute;
-  width: 125px;
-  height: 15px;
-  background-color: white;
+  width: 100px;
+  height: 125px;
+  background-size: contain;
 }
 
 .yellowBG {
@@ -56,9 +64,10 @@ body, a:link, a:visited, a:active{
 }
 
 .blinky {
-  border:10px solid red;
-  border-radius:10px;
-
+  background: url('img/nnamdi.png') no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 125px;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
