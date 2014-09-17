@@ -1,9 +1,10 @@
 $(document).ready(function(){
   window.dancers = [];
 
-  $(document).on('click', function() {
-    $('audio')[0].play();
-  });
+  // $(document).on('click', function() {
+  //   $('audio')[0].play();
+  // });
+// Music driving classmates crazy!
 
   // $(document).on('click', '#stop', function() {
   //   $('audio')[0].pause("death");
