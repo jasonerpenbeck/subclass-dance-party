@@ -64,8 +64,8 @@ var Dancer = function(top, left, timeBetweenSteps){
 
 
       dancerArray[i].animate({
-        left: "+=600",
-        top: "+=300"
+        left: oldLeft + left,
+        top: oldTop + top
       }, 2000);
     }
 
