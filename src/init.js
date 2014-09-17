@@ -24,9 +24,7 @@ $(document).ready(function(){
      * maker functions available in the global scope, clicking that node
      * will call the function to make the dancer.
      */
-     if($(this)[0].id === "ball") {
-      $(this).remove();
-     }
+
     /* dancerMakerFunctionName is a string which must match
      * one of the dancer maker functions available in global scope.
      * A new object of the given type will be created and added
@@ -51,7 +49,9 @@ $(document).ready(function(){
 
   });
 
-
+$('#ball').trigger('click');
+$('#ball').remove();
+//adds ball to screen on load
 
   $(document).on('mouseenter', '.shyDancer', function() {
     $(this).css('opacity',.1);
