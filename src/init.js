@@ -144,10 +144,6 @@ $('#ball').remove();
     for(var i = 1; i<=11; i++) {
       $('#niner').trigger('click');
     }
-    // Make 11 Raiders
-    for(var i = 1; i<=11; i++) {
-      $('#raider').trigger('click');
-    }
 
     // Set the offensive line
     var olDistanceFromBall = 60;
@@ -161,8 +157,12 @@ $('#ball').remove();
     window.dancers[4].addClass('ol rg');
     window.dancers[5].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 + 120}); // right tackle
     window.dancers[5].addClass('ol rt');
+
+    // Set the tight end
     window.dancers[6].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 + 180}); // right tackle
     window.dancers[6].addClass('te');
+
+    // Set the wide receivers
     window.dancers[7].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 - 300}); // WR Top
     window.dancers[7].addClass('wr wr-top');
     window.dancers[8].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 + 400}); // WR Bottom
@@ -170,9 +170,17 @@ $('#ball').remove();
     window.dancers[9].css({left: window.innerWidth * .5 - olDistanceFromBall, top: window.innerHeight * .5 + 300}); // WR Slot
     window.dancers[9].addClass('wr slot');
     window.dancers[10].css({left: window.innerWidth * .5 - olDistanceFromBall - 100, top: window.innerHeight * .5}); //QB
-    window.dancers[10].addClass('wr slot');
+    window.dancers[10].addClass('qb');
     window.dancers[11].css({left: window.innerWidth * .5 - olDistanceFromBall - 300, top: window.innerHeight * .5}); // RB
-    window.dancers[11].addClass('wr slot');
+    window.dancers[11].addClass('rb');
+
+        // Make 11 Raiders
+    for(var i = 1; i<=11; i++) {
+      $('#raider').trigger('click');
+      BlinkyDancer.prototype.lineUp();
+
+    }
+
 
 
   });

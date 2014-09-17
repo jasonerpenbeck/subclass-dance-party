@@ -98,11 +98,25 @@ body, a:link, a:visited, a:active{
 
 }
 
-.wr-top {}
+.wr-top {
+
+}
 .wr-bottom {}
 .slot {}
-.qb {}
-.rb {}
+.qb {
+  background: url('img/colin.png') no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 125px;
+
+}
+.rb {
+  background: url('img/gore.png') no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 125px;
+
+}
 
 
 

@@ -12,4 +12,14 @@ BlinkyDancer.prototype.step = function() {
   // this.$node.toggle();
 };
 
+BlinkyDancer.prototype.lineUp = function() {
+
+  // Raider Only Lineup
+  var dancerArray = window.dancers;
+  for(var i = 0; i < dancerArray.length; i++) {
+    if(dancerArray[i].hasClass("blinky")) {
+      dancerArray[i].css({left: 1000 + Math.random() * 150});
+    }
+  }
+};
 
