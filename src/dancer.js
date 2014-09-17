@@ -22,15 +22,19 @@ var Dancer = function(top, left, timeBetweenSteps){
 
   Dancer.prototype.lineUp = function(){
 
-
-   var dancerArray = window.dancers;
-   for(var i = 0; i < dancerArray.length; i++) {
-      if(dancerArray[i].hasClass("shyDancer")) {
-        dancerArray[i].css({left: Math.random() * 100});
-      } else {
-        dancerArray[i].css({left: Math.random() * 1000})
-      }
-   }
+  var dancerArray = window.dancers;
+  for(var i = 0; i < dancerArray.length; i++) {
+    if(dancerArray[i].hasClass("shyDancer")) {
+      dancerArray[i].css({left: 700});
+      //49er
+    } else if(dancerArray[i].hasClass("blinky")) {
+      dancerArray[i].css({left: 1000});
+      //raider
+    } else {
+      dancerArray[i].css({left: 800});
+      //ball
+    }
+  }
   };
 
   Dancer.prototype.marchALittle = function(maxTimes,speed) {
